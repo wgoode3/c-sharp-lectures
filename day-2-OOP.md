@@ -28,16 +28,58 @@
 
 ```cs
 
-public class Person
-{
-    public string Name;
-    public int Age;
-
-    public Person(string name,int age)
+    public class Person
     {
-        Name = name;
-        Age = age;
+        public string Name;
+        public int Age;
+
+        public Person(string name,int age)
+        {
+            Name = name;
+            Age = age;
+        }
+
+        
     }
-}
 ```
 
+### Quiz Time: 
+
+1. <details>
+    <summary>What are four common access modifiers?</summary>
+    <ul>
+        <li>public</li>
+        <li>private</li>
+        <li>protected</li>
+        <li>internal</li>
+    </ul>
+</details>
+
+2. <details>
+    <summary>What are the three memebers of a class?</summary>
+    <ul>
+        <li>Fields</li>
+        <li>Properties</li>
+        <li>Methods</li>
+    </ul>
+</details>
+
+### Class Inheritance
+
+```cs
+
+public class Ninja : Person
+{
+    public int Strength;
+    public int Dexterity;
+    public int Speed;
+
+    public Ninja(string name, int age, int str, int dex, int spd) : base(name,age)
+    {
+        Strength = str;
+        Dexterity = dex;
+        Speed = spd;
+    }
+}
+
+```
