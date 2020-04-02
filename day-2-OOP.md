@@ -31,19 +31,16 @@ If a member is private then it can only be accessed with that class.<br>
 This means that even the instance of the object can't access the private member.
 
 #### Access Modifiers:
-    <ul>
-        <li>public</li>
-        <li>private</li>
-        <li>protected</li>
-        <li>internal</li>
-    </ul>
+    * public
+    * private
+    * protected
+    * internal
 
 #### Class Memebers:
-    <ul>
-        <li>Fields</li>
-        <li>Properties</li>
-        <li>Methods</li>
-    </ul>
+    * Fields
+    * Properties
+    * Methods
+
 
 ```cs
 
