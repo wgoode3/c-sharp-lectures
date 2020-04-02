@@ -15,11 +15,11 @@ dotnet new console -o HelloWorld
 This will generate a project that looks much like this...
 
 ```
-- HelloWorld/
-| - bin/
-| - obj/
-| - HelloWorld.csproj
-| - Program.cs
+├─ HelloWorld/
+  ├─ bin/
+  ├─ obj/
+  ├─ HelloWorld.csproj
+  ├─ Program.cs
 ```
 
 #### To interprete or to compile?
@@ -286,7 +286,6 @@ namespace HelloWorld
 For now this will be a good way for us to structure our code. If we didn't include `static`, we would have to make an instance of `HelloWorld` in order to run `Print1To255()`.
 
 ```cs
-
 HelloWorld hello1 = new HelloWorld();
 hello1.Print1To255();
 ```
