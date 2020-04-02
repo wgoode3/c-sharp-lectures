@@ -81,6 +81,9 @@ public class Person
 
 ### Class Inheritance
 
+Classes can inherit fields, properties, and methods from other classes.
+Below the Ninja class inherits from the Person class.
+
 ```cs
 
 public class Person
@@ -122,3 +125,10 @@ public class Ninja : Person
 }
 
 ```
+
+The parent class is refered to as the base class, and in our constructors, we call on the base.  Now we can reuse the Name and Age fields from the Person class in our Ninja class, and not rewrite the code again.
+
+When it comes to inheritance...
+
+<img src="https://i.imgflip.com/3v4xco.jpg" alt="base class" height="500px" />
+
