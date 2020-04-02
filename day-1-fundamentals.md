@@ -24,7 +24,7 @@ This will generate a project that looks much like this...
 
 #### To interprete or to compile?
 
-|               | Interpreted Languages                  | Compiled Languages                     |
+|               | Compiled Languages                     | Interpreted Languages                  |
 |---------------|----------------------------------------|----------------------------------------|
 | Advantages    | speed <br> checks code at compile time | flexibility <br> source code is public |
 | Disadvantages | source code is private                 | tends to be slower                     |
