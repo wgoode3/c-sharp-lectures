@@ -28,19 +28,34 @@
 
 ```cs
 
-    public class Person
+public class Person
+{
+    public string Name;
+    private int age;
+
+    public Person(string _name,int _age)
     {
-        public string Name;
-        public int Age;
-
-        public Person(string name,int age)
-        {
-            Name = name;
-            Age = age;
-        }
-
-        
+        Name = _name;
+        Age = _age;
     }
+
+    public int Age
+    {
+        get{
+            return age;
+        }
+    }
+
+    public int Birthday()
+    {
+        age ++;
+        return age;
+    }
+
+
+    
+}
+
 ```
 
 ### Quiz Time: 
@@ -68,6 +83,24 @@
 
 ```cs
 
+public class Person
+{
+    public string Name;
+    protected int Age;
+    public int Age
+    {
+        get{
+            return age;
+        }
+    }
+
+    public virtual int Birthday()
+    {
+        age ++;
+        return age;
+    }
+}
+
 public class Ninja : Person
 {
     public int Strength;
@@ -79,6 +112,12 @@ public class Ninja : Person
         Strength = str;
         Dexterity = dex;
         Speed = spd;
+    }
+
+    public override int Birthday()
+    {
+        age += 2;
+        return age;
     }
 }
 
