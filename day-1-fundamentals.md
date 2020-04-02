@@ -46,13 +46,13 @@ using System;
 
 namespace HelloWorld 
 {
-  class Program 
-  {
-    static void Main(string[] args)
+    class Program 
     {
-      Console.WriteLine("Hello World");
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World");
+        }
     }
-  }
 }
 ```
 
@@ -108,10 +108,10 @@ Or more conveniently we could write this as...
 
 ```cs
 string[] Foods = new string[]{
-  "bagels",
-  "cream cheese",
-  "smoked salmon",
-  "capers"
+    "bagels",
+    "cream cheese",
+    "smoked salmon",
+    "capers"
 };
 ```
 
@@ -149,10 +149,10 @@ The syntax might look a bit strange at first, but we still need to let the `List
 
 ```cs
 List<string> Foods = new List<string>() {
-  "bagels",
-  "cream cheese",
-  "smoked salmon",
-  "capers"
+    "bagels",
+    "cream cheese",
+    "smoked salmon",
+    "capers"
 };
 ```
 
@@ -184,21 +184,22 @@ We can write loops just about how we might be used to from other languages...
 ```cs
 for(int i=0; i<3; i++)
 {
-  Console.WriteLine(i);
+    Console.WriteLine(i);
 }
 ```
 
 If we want to loop over an Array or a List we can reference their sizes like so...
 
 ```cs
+// array
 for(int i=0; i<MyArray.Length; i++)
 {
-  Console.WriteLine(MyArray[i]);
+    Console.WriteLine(MyArray[i]);
 }
-// or
+// list
 for(int i=0; i<MyList.Count; i++)
 {
-  Console.WriteLine(MyList[i]);
+    Console.WriteLine(MyList[i]);
 }
 ```
 
@@ -208,10 +209,10 @@ If we don't need to know about the index we could use the more convenient method
 
 ```cs 
 foreach(int value in MyArray){
-  Console.writeLine(value);
+    Console.writeLine(value);
 }
 foreach(int value in MyList){
-  Console.writeLine(value);
+    Console.writeLine(value);
 }
 ```
 
@@ -225,8 +226,8 @@ We can still write `while` loops too!
 string input = "";
 while(!input.Equals("uncle"))
 {
-  Console.WriteLine("Say uncle!");
-  input = Console.ReadLine();
+    Console.WriteLine("Say uncle!");
+    input = Console.ReadLine();
 }
 ```
 
@@ -244,11 +245,11 @@ If we want the grammar to sound right, we'll need to be able to change the wordi
 ```cs
 if(NumberOfLights == 1) 
 {
-  Console.WriteLine("There is 1 light!");
+    Console.WriteLine("There is 1 light!");
 }
 else
 {
-  Console.WriteLine($"There are {NumberOfLights} lights!");
+    Console.WriteLine($"There are {NumberOfLights} lights!");
 }
 ```
 
@@ -263,23 +264,23 @@ using System;
 
 namespace HelloWorld 
 {
-  class Program 
-  {
-    
-    static void Print1To255()
+    class Program 
     {
-      for(int i=0; i<256; i++)
-      {
-        Console.WriteLine(i);
-      }
-    }
+    
+        static void Print1To255()
+        {
+            for(int i=0; i<256; i++)
+            {
+                Console.WriteLine(i);
+            }
+        }
   
-    static void Main(string[] args)
-    {
-      Print1To255();
-    }
+        static void Main(string[] args)
+        {
+            Print1To255();
+        }
     
-  }
+    }
 }
 ```
 
