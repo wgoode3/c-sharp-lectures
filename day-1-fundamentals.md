@@ -24,10 +24,10 @@ This will generate a project that looks much like this...
 
 #### To interprete or to compile?
 
-|               | Interpreted Languages                  | Compiled Languages                  |
-|---------------|----------------------------------------|-------------------------------------|
-| Advantages    | speed <br> checks code at compile time | flexibility <br> public source code |
-| Disadvantages | private source code                    | tends to be slower                  |
+|               | Interpreted Languages                  | Compiled Languages                     |
+|---------------|----------------------------------------|----------------------------------------|
+| Advantages    | speed <br> checks code at compile time | flexibility <br> source code is public |
+| Disadvantages | source code is private                 | tends to be slower                     |
 
 C# will compile our program into an intermediate language (we can see it in the `bin/` folder) that can then be run by Dotnet for us.  
 
