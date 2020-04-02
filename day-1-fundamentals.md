@@ -15,11 +15,11 @@ dotnet new console -o HelloWorld
 This will generate a project that looks much like this...
 
 ```
-├─ HelloWorld/
-  ├─ bin/
-  ├─ obj/
-  ├─ HelloWorld.csproj
-  ├─ Program.cs
+├ HelloWorld/
+  ├ bin/
+  ├ obj/
+  ├ HelloWorld.csproj
+  ├ Program.cs
 ```
 
 #### To interprete or to compile?
