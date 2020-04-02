@@ -6,13 +6,38 @@
 
 1. <details>
     <summary>What are the four pillars of OOP?</summary>
-    i.   Encapsulation
-    ii.  Abstraction
-    iii. Polymorphism
-    iv.  Inheritance 
+    <ul>
+        <li>Encapsulation</li>
+        <li>Abstraction</li>
+        <li>Polymorphism</li>
+        <li>Inheritance</li>
+    </ul>
 </details>
 
 2. <details>
     <summary>What are the benefits of OOP?</summary>
-    
+    <ul>
+        <li>Resuability</li>
+        <li>Simplicity</li>
+        <li>Easily Maintainable</li>
+        <li>Security for Class Variables</li>
+    </ul>
 </details>
+
+### Class Construction in C#
+
+```cs
+
+public class Person
+{
+    public string Name;
+    public int Age;
+
+    public Person(string name,int age)
+    {
+        Name = name;
+        Age = age;
+    }
+}
+```
+
