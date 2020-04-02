@@ -75,6 +75,11 @@ public class Person
             }
         }
     }
+
+    public virtual void SayName()
+    {
+        Console.WriteLine($"Hello, my name is {Name}");
+    }
 }
 ```
 
@@ -93,23 +98,6 @@ Below the Ninja class inherits from the Person class.
 
 ```cs
 
-public class Person
-{
-    public string Name;
-    protected int Age;
-    public int Age
-    {
-        get{
-            return age;
-        }
-    }
-
-    public virtual int Birthday()
-    {
-        age ++;
-        return age;
-    }
-}
 
 public class Ninja : Person
 {
@@ -124,16 +112,22 @@ public class Ninja : Person
         Speed = spd;
     }
 
-    public override int Birthday()
+    public override void SayName()
     {
-        age += 2;
-        return age;
+        Console.WriteLine($"Hello my name is {Name}, and I'm a ninja!")
     }
+
+    
 }
 
 ```
 
-The parent class is refered to as the base class, and in our constructors, we call on the base.  Now we can reuse the Name and Age fields from the Person class in our Ninja class, and not rewrite the code again.
+The parent class is refered to as the base class, and in our constructors, we call on the base.  Now we can reuse the Name and Age fields from the Person class in our Ninja class, and not rewrite the code again.<br>
+
+We implement the virtual keyword on a base class method if we want to be able to customize it in our child class.<br>
+We then use the override keyword in our child class.<br>
+
+*side note: We can call the base method SayName from the child class with base.SayName()*
 
 When it comes to inheritance...
 
