@@ -26,6 +26,25 @@
 
 ### Class Construction in C#
 
+We can make class members accessible with access modifiers.<br>
+If a member is private then it can only be accessed with that class.<br>
+This means that even the instance of the object can't access the private member.
+
+#### Access Modifiers:
+    <ul>
+        <li>public</li>
+        <li>private</li>
+        <li>protected</li>
+        <li>internal</li>
+    </ul>
+
+#### Class Memebers:
+    <ul>
+        <li>Fields</li>
+        <li>Properties</li>
+        <li>Methods</li>
+    </ul>
+
 ```cs
 
 public class Person
@@ -36,52 +55,41 @@ public class Person
     public Person(string _name,int _age)
     {
         Name = _name;
-        Age = _age;
+        age = _age;
     }
 
     public int Age
     {
-        get{
+        get
+        {
             return age;
         }
+        set
+        {
+            if(value < 0)
+            {
+                Console.WriteLine($"{Name} isn't Benjiman Button!!!")
+            }
+            else
+            {
+                age = value;
+            }
+        }
     }
-
-    public int Birthday()
-    {
-        age ++;
-        return age;
-    }
-
-
-    
 }
-
 ```
 
-### Quiz Time: 
+We can make the age field private so that it is shielded from the outside, and then make it accessible through a property.
 
-1. <details>
-    <summary>What are four common access modifiers?</summary>
-    <ul>
-        <li>public</li>
-        <li>private</li>
-        <li>protected</li>
-        <li>internal</li>
-    </ul>
-</details>
+#### But why are we making a field private only to make it accessible in a property?
 
-2. <details>
-    <summary>What are the three memebers of a class?</summary>
-    <ul>
-        <li>Fields</li>
-        <li>Properties</li>
-        <li>Methods</li>
-    </ul>
-</details>
+By making the private variable accessible through the property, the class can control how the age field is set.<br>
+
+
 
 ### Class Inheritance
 
-Classes can inherit fields, properties, and methods from other classes.
+Classes can inherit fields, properties, and methods from other classes.<br>
 Below the Ninja class inherits from the Person class.
 
 ```cs
