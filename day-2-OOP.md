@@ -30,16 +30,18 @@ We can make class members accessible with access modifiers.<br>
 If a member is private then it can only be accessed with that class.<br>
 This means that even the instance of the object can't access the private member.
 
-#### Access Modifiers:
-    * public
-    * private
-    * protected
-    * internal
+#### Access Modifiers
 
-#### Class Memebers:
-    * Fields
-    * Properties
-    * Methods
+* public
+* private
+* protected
+* internal
+
+#### Class Memebers
+
+* Fields
+* Properties
+* Methods
 
 
 ```cs
