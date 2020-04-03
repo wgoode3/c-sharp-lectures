@@ -1,3 +1,8 @@
 # Day 4 - RPG Hack-a-thon
 
-<img src="https://banner2.cleanpng.com/20180410/rze/kisspng-ninja-computer-programming-learning-study-skills-avatar-5acd61df554968.2443493915234093753493.jpg" alt="Ninja" width="200px" />
+<img src="https://mrcoderdojo.org/dojo/wp-content/uploads/2018/11/ninja.jpg" alt="Ninja" width="200px" />
+
+### Welcome C# Ninjas!!!
+
+1. Today we will break into teams of 4 - 5.<br>
+2. You will have until 3pm to finish the group activity.
