@@ -14,7 +14,7 @@
 
 
 <details>
-    <summary></summary>
+    <summary>You are part of a team of developer ninjas that are tasked with a mission to search out new algorithms from the solar system.  Your journey begins on Earth, blasting off and making your way around the planets to collect algos for human-kind.  What will you encounter out in the far reaches of space?</summary>
 
 </details>
 
@@ -22,5 +22,15 @@
 ## Ninjas vs. Monkeys
 <img src="https://vectr.com/adion81/aheA3tiun.svg?width=680.46&height=223.55&select=aheA3tiunpage0" alt="Ninjas vs Monkeys" width="300px">
 
+<details>
+    <summary>You and a group of developer ninjas are going on an expidition to find the most valuable algorithms in the Amazon Rainforest.  There you will search for ancient lost algos, but you encouter a monkey empire that don't want the forest's secrets revealed.</summary>
+
+</details>
+
 ## Ninja Corp.
 <img src="https://vectr.com/adion81/ffuiRnLWA.svg?width=680.46&height=223.55&select=ffuiRnLWApage0" alt="Ninjas vs Monkeys" width="300px">
+
+<details>
+    <summary>You finally made it out of Coding Dojo, and landed your dream job at Ninja Corp!!!  We'll maybe it isn't the dreamiest job.  Okay, let's be honest, this dream is more of a nightmare.  You and your team of ninja developers must battle corporate reports, micro-managing bosses, and cases of the Mundays.</summary>
+
+</details>
