@@ -30,6 +30,7 @@
         <li>Create a text based narrative around the theme.</li>
         <li>Allow the player to make choices about the encounters</li>
     </ul>
+    [Repo Link]('https://github.com/adion81/cSharp-ninjasInSpace')
 
 </details>
 
@@ -53,7 +54,7 @@
 <img src="https://vectr.com/adion81/ffuiRnLWA.svg?width=680.46&height=223.55&select=ffuiRnLWApage0" alt="Ninjas vs Monkeys" width="300px">
 
 <details>
-    <summary>You finally made it out of Coding Dojo, and landed your dream job at Ninja Corp!!!  We'll maybe it isn't the dreamiest job.  Okay, let's be honest, this dream is more of a nightmare.  You and your team of ninja developers must battle corporate reports, micro-managing bosses, and cases of the Mundays.  You must finish all your duties before you get fired!</summary>
+    <summary>You finally made it out of Coding Dojo, and landed your dream job at Ninja Corp!!!  We'll maybe it isn't the dreamiest job.  Okay, let's be honest, this dream is more of a nightmare.  You and your team of ninja developers must battle corporate reports, micro-managing bosses, and cases of the Mundays.  You must finish all your duties or you be fired!</summary>
     Requirements:
     <ul>
         <li>Must implement abstract classes and interfaces</li>
