@@ -30,7 +30,7 @@
         <li>Create a text based narrative around the theme.</li>
         <li>Allow the player to make choices about the encounters</li>
     </ul>
-    [Repo Link]('https://github.com/adion81/cSharp-ninjasInSpace')
+    [Repo Link](https://github.com/adion81/cSharp-ninjasInSpace)
 
 </details>
 
