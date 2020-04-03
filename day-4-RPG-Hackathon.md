@@ -10,8 +10,9 @@
 
 
 # Ninjas In Space
-<img src="https://vectr.com/adion81/gDcNa2jhl.svg?width=680.46&height=223.55&select=gDcNa2jhlpage0" alt="Ninjas in Space" width="50px" >
+<img src="https://vectr.com/adion81/gDcNa2jhl.svg?width=680.46&height=223.55&select=gDcNa2jhlpage0" alt="Ninjas in Space" width="300px" >
 
 # Ninjas vs. Monkeys
+<img src="https://vectr.com/adion81/aheA3tiun.svg?width=680.46&height=223.55&select=aheA3tiunpage0" alt="Ninjas vs Monkeys" width="300px">
 
 # Ninja Corp.
