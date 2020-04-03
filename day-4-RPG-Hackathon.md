@@ -10,6 +10,7 @@
 
 
 # Ninjas In Space
+<img src="https://vectr.com/adion81/gDcNa2jhl.svg?width=680.46&height=223.55&select=gDcNa2jhlpage0" alt="Ninjas in Space" width="50px" >
 
 # Ninjas vs. Monkeys
 
