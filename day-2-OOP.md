@@ -30,6 +30,38 @@ We can make class members accessible with access modifiers.<br>
 If a member is private then it can only be accessed with that class.<br>
 This means that even the instance of the object can't access the private member.
 
+#### Modularization with Classes
+
+```
+├ HelloWorld/
+  ├ bin/
+  ├ obj/
+  ├ Models/
+    ├ Person.cs
+  ├ HelloWorld.csproj
+  ├ Program.cs
+```
+
+If we want to access the classes in our Program.cs file, then we need to add a using statement at the top of the file.
+
+```cs
+using System;
+using System.Collections.Generic;
+using MyCoolProject.Models;
+
+namespace MyCoolProject
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Person adrien = new Person("Adrien",38);
+        }
+    }
+}
+
+```
+
 #### Access Modifiers
 
 * public
