@@ -26,14 +26,14 @@
 
 ### Class Construction in C#
 
-We can make class members accessible with access modifiers.<br>
-If a member is private then it can only be accessed with that class.<br>
-This means that even the instance of the object can't access the private member.
+As with any good application, it should follow some sort of structure.<br>
+C# is no different. For every class that we write, it makes sense to put it in it's own file.<br>
+Creating a Models folder is a good way to keep all your classes in one easy to find place.
 
 #### Modularization with Classes
 
 ```
-├ HelloWorld/
+├ MyCoolProject/
   ├ bin/
   ├ obj/
   ├ Models/
@@ -61,6 +61,8 @@ namespace MyCoolProject
 }
 
 ```
+
+We also need to start using access modifiers so that the classes that we create are accessible in other files.
 
 #### Access Modifiers
 
