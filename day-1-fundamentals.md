@@ -41,20 +41,7 @@ Compile Time vs. Runtime
 
 ### `Program.cs`
 
-```cs
-using System;
-
-namespace HelloWorld 
-{
-    class Program 
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World");
-        }
-    }
-}
-```
+<img src="https://raw.githubusercontent.com/wgoode3/c-sharp-lectures/master/assets/cs-anatomy.png" alt="c sharp hello world" />
 
 ### C# Types
 
