@@ -78,46 +78,98 @@ We can say the variable that we create is a `Person` or a `Student`, but when go
 
 ## Interface
 
-what if we want to guarantee unrelated classes can be used the same way?
+Let's say we want to be able to make a `Bird` class in addition to our `Student` class, and as part of this `Bird` class we want the bird to be able to make some sort of noises. 
 
+As this is something that we also want students to be able to do we might think to add a `public void MakeNoise()` method into our `Person` class, but it wouldn't make sense for a `Bird` to also inherate from `Person`. 
+
+In this case where we have unrelated classes that we want to be able to make share some functionality we can use an **Interface**. 
+
+```cs
+// inside of IVocalizable.cs
+using System;
+namespace People 
+{
+    interface IVocalizable
+    {
+        virtual void MakeNoise()
+        {
+            Console.WriteLine("DEFAULT NOISE");
+        }
+    }
+}
+```
+
+And when we make a `Bird` we can implement this interface...
+
+```cs
+// inside of Bird.cs
+using System;
+using People;
+namespace Animals 
+{
+    class Bird : IVocalizable
+    {
+        public string Name {get;set;}
+        
+        public Bird(string name)
+        {
+            Name = name;
+        }
+        
+        public override void MakeNoise()
+        {
+            Console.WriteLine("Chirp chirp!");
+        }
+        
+    }
+}
+```
+
+we can also rewrite our student to use it as well
+
+```cs
+// inside of Student.cs
+namespace People {
+    public class Student : Person, IVocalizable
+    {
+        public string Name {get;set;}
+        public int NumBelts {get;set;}
+
+        public Student(string name, int numBelts) : base(name)
+        {
+            NumBelts = numBelts;
+        }
+        
+        public override void MakeNoise()
+        {
+            Console.WriteLine($"Hi my name is {Name}");
+        }
+    }
+}
+```
+
+So what did this accomplish? Let's say there is some room that contains students and birds, we can hear all of the noises they might make.
+
+```cs
+// inside of Program.cs
+{
+    List<IVocalizable> SomeRoom = new List<IVocalizable>(){
+        new Student("Ed", 1),
+        new Student("Edd", 2),
+        new Bird("Eddy")
+    };
+    // let's hear them all!
+    foreach(IVocalizable thing in SomeRoom)
+    {
+        thing.MakeNoise();
+    }
+}
+```
+
+We're able to group all of the students and birds into a `List` even though they are different classes because they all implement `IVocalizable`. Once again when we loop through them we can make them all `MakeNoise()` because they all have implemented `IVocalizable`.
+
+We can treat `IVocalizable` like a promise that any class that implements it must be able to `MakeNoise()`.
 
 ## Abstracts vs Interfaces
 
 <img src="https://raw.githubusercontent.com/wgoode3/c-sharp-lectures/master/assets/abstracts-interfaces.png" alt="diagram" />
-
-```cs
-// Drink.cs
-
-namespace Beverage {
-
-    public abstract class Drink
-    {
-    
-        public string Color {get;set;}
-        public bool IsCarbonated {get;set;}
-        public double Temperature {get;set;}
-    
-    
-        /// <summary>
-        /// Drinks need to have color, isCarbonated, and a temperature
-        /// </summary>
-        public Drink (string color, bool isCarbonated, double temperature)
-        {
-            Color = color;
-            IsCarbonated = isCarbonated;
-            Temperature = temperature;
-        }
-        
-        /// <summary>
-        /// The way we consume the drink will vary based on temerature
-        /// </summary>
-        public virtual void Consume ()
-        {
-            // I'll assume we're using Celsius here
-            temperature < 40 ? Console.WriteLine("Glug glug...") : Console.WriteLine("Sip sip...");
-        }
-    
-    }
-}
-
-```
