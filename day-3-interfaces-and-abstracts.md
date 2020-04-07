@@ -11,8 +11,9 @@ what if we never want to make an instance of our base class?
 what if we want to guarantee unrelated classes can be used the same way?
 
 
-Example code here...
+## Abstracts vs Interfaces
 
+<img src="https://raw.githubusercontent.com/wgoode3/c-sharp-lectures/master/assets/abstracts-interfaces.png" alt="diagram" />
 
 ```cs
 // Drink.cs
