@@ -45,6 +45,37 @@ this will throw an error of...
 Program.cs(10,25): error CS0144: Cannot create an instance of the abstract class or interface 'Person' 
 ```
 
+Instead, we need to make a class that can inherate the `Person` class to use it.
+
+```cs
+// inside of Student.cs
+namespace People {
+    public class Student : Person
+    {
+        public string Name {get;set;}
+        public int NumBelts {get;set;}
+
+        public Student(string name, int numBelts) : base(name)
+        {
+            NumBelts = numBelts;
+        }
+    }
+}
+```
+
+Now with this student class we can make a `Person`.
+
+```cs
+// inside of Program.cs
+static void Main(string[] args)
+{
+    Person Ed = new Student("Ed", 1);
+    Student Edd = new Student("Edd", 2);
+}
+```
+
+We can say the variable that we create is a `Person` or a `Student`, but when go to create it has to be a `new Student(...)`.
+
 ## Interface
 
 what if we want to guarantee unrelated classes can be used the same way?
