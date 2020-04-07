@@ -4,15 +4,13 @@
 
 ## Abstract Class
 
-what if we never want to make an instance of our base class?
-
 By now we've probably seen how inheritance can lead to us writing <abbr title="Don't Repeat Yourself">DRY</abbr> code, often times we might end up in a situation where the base class that we use with different but closely related classes never needs to be implemented itself. In heavily OOP languages like C#, we can declare such a class `abstract` and enforce that this class is to be used soley to be inherited from.
 
 If we define a `Person` class as abstract...
 
 ```cs
 // inside of Person.cs
-namespace People {
+namespace Things.Models {
     public abstract class Person
     {
         public string Name {get;set;}
@@ -28,7 +26,8 @@ we won't be able to make an instace of it in the `Program` class.
 
 ```cs
 // inside of Program.cs
-namespace People {
+using Things.Models;
+namespace Things {
     class Program
     {
         static void Main(string[] args)
@@ -49,7 +48,7 @@ Instead, we need to make a class that can inherate the `Person` class to use it.
 
 ```cs
 // inside of Student.cs
-namespace People {
+namespace Things.Models {
     public class Student : Person
     {
         public string Name {get;set;}
@@ -87,7 +86,7 @@ In this case where we have unrelated classes that we want to be able to make sha
 ```cs
 // inside of IVocalizable.cs
 using System;
-namespace People 
+namespace Things.Models 
 {
     interface IVocalizable
     {
@@ -104,8 +103,7 @@ And when we make a `Bird` we can implement this interface...
 ```cs
 // inside of Bird.cs
 using System;
-using People;
-namespace Animals 
+namespace Things.Models 
 {
     class Bird : IVocalizable
     {
@@ -129,7 +127,8 @@ we can also rewrite our student to use it as well
 
 ```cs
 // inside of Student.cs
-namespace People {
+namespace Things.Models
+{
     public class Student : Person, IVocalizable
     {
         public string Name {get;set;}
