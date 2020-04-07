@@ -42,7 +42,7 @@ namespace People {
 this will throw an error of...
 
 ```
-
+Program.cs(10,25): error CS0144: Cannot create an instance of the abstract class or interface 'Person' 
 ```
 
 ## Interface
