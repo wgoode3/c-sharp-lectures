@@ -19,9 +19,21 @@
 
     We will be splitting
     Into teams of four
-    Want more than that?
+    What's that? You want more than that?
     Please add one more
 
+    You must implement
+    an interface
+    And abstract is necessary
+    to win this race
+
+    You will have six hours to make your code bad-,
+    load it up to git up and present it to the class!
+
+    So turn your computers on
+    Its a C# Hack-a-thon
+    Form your team--thons
+    and have a C#, C#, C#, C# Hack-a-thon
 
 ```
 
