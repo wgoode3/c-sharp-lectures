@@ -90,10 +90,7 @@ namespace Things.Models
 {
     interface IVocalizable
     {
-        virtual void MakeNoise()
-        {
-            Console.WriteLine("DEFAULT NOISE");
-        }
+        virtual void MakeNoise();
     }
 }
 ```
@@ -114,7 +111,7 @@ namespace Things.Models
             Name = name;
         }
         
-        public override void MakeNoise()
+        public void MakeNoise()
         {
             Console.WriteLine("Chirp chirp!");
         }
@@ -139,7 +136,7 @@ namespace Things.Models
             NumBelts = numBelts;
         }
         
-        public override void MakeNoise()
+        public void MakeNoise()
         {
             Console.WriteLine($"Hi my name is {Name}");
         }
