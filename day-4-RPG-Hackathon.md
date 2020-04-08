@@ -4,6 +4,20 @@
 
 ### Welcome C# Ninjas!!!
 
+#### C# HACK-A-THON SONG
+##### A totally original song by Adrien Dion
+```
+    Turn your computers on
+    For a C# hack-a-thon
+    It's a Dojo fun-a-thon
+    Our C# hack-a-thon
+
+    A hack-a-thon is
+    a competition of code
+    A team must finish their program
+    before their heads explode
+```
+
 1. Today we will break into teams of 4 - 5.<br>
 2. You will have until 3pm to finish the group activity, and then we will re-group to present our games.
 3. Please choose from the following 3 versions of the RPG game . . . 
