@@ -24,7 +24,7 @@
 
     You must implement
     an interface
-    And abstract is necessary
+    And an abstract class
     to win this race
 
     You will have four hours to make your code bad-,
