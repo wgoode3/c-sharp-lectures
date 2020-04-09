@@ -27,12 +27,12 @@
     And abstract is necessary
     to win this race
 
-    You will have six hours to make your code bad-,
-    load it up to git up and present it to the class!
+    You will have four hours to make your code bad-,
+    load it up to github and present it to the class!
 
     So turn your computers on
     Its a C# Hack-a-thon
-    Form your team--thons
+    Form your team-a-thons
     and have a C#, C#, C#, C# Hack-a-thon
 
 ```
