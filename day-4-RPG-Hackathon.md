@@ -39,7 +39,7 @@
 
 1. Today we will break into teams of 4 - 5.<br>
 2. You will have until 3pm to finish the group activity, and then we will re-group to present our games.
-3. Please choose from the following 3 versions of the RPG game . . . 
+3. Please choose from the following 3 themes of the RPG game . . . 
 
 
 ### Rules:
@@ -96,5 +96,5 @@
         <li>Create a text based narrative around the theme.</li>
         <li>Allow the player to make choices about the encounters</li>
     </ul>
-    [Repo Link](https://github.com/adion81/cSharp-NinjaRemoteIsland)
+    [Repo Link](https://github.com/adion81/cSharp-DojoCorp)
 </details>
