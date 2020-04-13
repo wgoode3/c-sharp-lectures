@@ -152,3 +152,42 @@ With tag helpers we can bind our models or ViewModels to our forms.<br>
 
 We now pass the model reference type into the parameters of the post method, and can validate it like so.<br>
 If the ModelState isn't valid we can just re-render the form page.
+
+## SESSION
+
+### TRY TO SAY SESSION 5 TIMES FAST.
+
+We use session to store variables on our browser.  We can use it to keep track of a user that is logged into our site.
+
+### THE SETUP:
+
+```cs
+using Microsoft.AspNetCore.Http;
+
+namespace MyCoolProject
+{
+    public class HomeController : Controller
+    {
+        [HttpGet("")]
+        public IActionResult Index()
+        {
+            // SETS AN INTEGER INTO SESSION CALLED 'COUNT'
+            HttpContext.Session.SetInt32("Count", 1);
+
+            // SETS A STRING INTO SESSION CALLED 'NAME'
+            HttpContext.Session.SetString("Name","Benny Bob");
+
+            return View();
+        }
+
+        [HttpGet("another")]
+        public IActionResult Another()
+        {
+            // GETS 'COUNT' OUT OF SESSION, MODIFIES IT, AND PUTS IT BACK IN.
+            int? count = HttpContext.Session.GetInt32("Count");
+            count ++;
+            HttpContext = HttpContext.Session.SetInt32("Count",(int)count);
+        }
+    }
+}
+```
