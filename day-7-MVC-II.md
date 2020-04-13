@@ -91,6 +91,7 @@ A ViewModel is a way that we can keep the strict type going in our template file
     <li>Must define them at the top of the razor file.</li>
     <li>There can be only one ViewModel.</li>
 <ul>
+<br>
 
 We can even use models that we write in our project and use them in our templates.<br>
 This is how we can tie a model to a form to create an object.
