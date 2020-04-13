@@ -155,6 +155,8 @@ If the ModelState isn't valid we can just re-render the form page.
 
 ## SESSION
 
+<img src="https://media.makeameme.org/created/session-is-coming.jpg" alt="Session" width="800px">
+
 ### TRY TO SAY SESSION 5 TIMES FAST.
 
 We use session to store variables on our browser.  We can use it to keep track of a user that is logged into our site.
