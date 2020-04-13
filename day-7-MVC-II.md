@@ -45,6 +45,7 @@ Let's take a look into the Layout file can look like after some trimming...
 
 <img src="https://github.com/wgoode3/c-sharp-lectures/blob/master/assets/Screen%20Shot%202020-04-13%20at%201.37.11%20PM.png" alt="asp-dot-net core logo" height="600px" />
 *SIDE NOTE: This is where we link our css files!!!*<br>
+<br>
 Here are the things we trimmed:
 
 ```
@@ -79,4 +80,39 @@ Here are the things we trimmed:
             &copy; 2020 - MyCoolProject - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
+```
+
+We no longer need to use the head tag in our view files, because our _Layout.cshtml will contain it, and we will be injecting all our views into the body when `@RenderBody()` is called.
+
+## ViewModels
+
+A ViewModel is a way that we can keep the strict type going in our template files. But there are some guidelines to them:
+<ul>
+    <li>Must define them at the top of the razor file.</li>
+    <li>There can be only one ViewModel.</li>
+<ul>
+
+We can even use models that we write in our project and use them in our templates.<br>
+This is how we can tie a model to a form to create an object.
+
+### User.cs
+```cs
+namespace MyCoolProject
+{
+    public class User
+    {
+        public string Name {get; set;}
+        public string Email {get; set;}
+    }
+}
+```
+
+### Index.cshtml
+```html
+@model User
+ <form asp-action="Process" method="post" >
+    <input asp-for="Name" >
+    <input asp-for="Email">
+    <input type="submit" value="Create" >
+ </form>
 ```
