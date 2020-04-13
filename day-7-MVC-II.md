@@ -14,7 +14,7 @@ dotnet new mvc --no-https -o MyCoolSite
 We will get a project that looks something like this . . .
 
 ```
-├ HelloWorld/
+├ MyCoolSite/
   ├ bin/
   ├ obj/
   ├ Controllers/
@@ -25,9 +25,9 @@ We will get a project that looks something like this . . .
     ├ Home/
         ├ Index.cshtml
     ├ Shared/
-        ├ @_Layout.cshtml
-    ├ @_ViewImports.cshtml
-    ├ @_ViewStart.cshtml
+        ├ _Layout.cshtml
+    ├ _ViewImports.cshtml
+    ├ _ViewStart.cshtml
   ├ wwwroot
     ├ css
     ├ images
@@ -40,3 +40,7 @@ We will get a project that looks something like this . . .
   ├ Startup.cs
 ```
 
+This is considerably more than the web application!!!<br>
+Let's take a look into the Layout file can look like after some trimming...
+
+<img src="https://github.com/wgoode3/c-sharp-lectures/blob/master/assets/Screen%20Shot%202020-04-13%20at%201.37.11%20PM.png" alt="asp-dot-net core logo" height="600px" />
