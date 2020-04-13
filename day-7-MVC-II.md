@@ -161,6 +161,10 @@ We use session to store variables on our browser.  We can use it to keep track o
 
 ### THE SETUP:
 
+`services.AddSession();` in ConfigureServices Method.<br>
+<br>
+`app.UseSession();` in Configure Method.
+
 ```cs
 using Microsoft.AspNetCore.Http;
 
