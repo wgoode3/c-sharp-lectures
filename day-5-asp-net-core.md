@@ -193,7 +193,7 @@ We can write all sorts of C# code inside of these files...
 <body>
     <h1>This is still the Index view!</h1>
     @{
-        List<string> Names = new List<String>(){
+        List<string> Names = new List<string>(){
             "Adrien", "Anne", "Benny", "Chris", "Daisy", "Phil", "Saurabh", "Will"
         };
         <ul>
