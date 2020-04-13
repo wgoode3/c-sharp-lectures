@@ -101,18 +101,53 @@ namespace MyCoolProject
 {
     public class User
     {
+        [Required(ErrorMessage="Name is required.")]
         public string Name {get; set;}
+
+        [Required(ErrorMessage="Email is required.")]
+        [EmailAddress]
         public string Email {get; set;}
     }
 }
 ```
 
+We can add validations to our Models with the bracket syntax.
+
 ### Index.cshtml
 ```html
 @model User
  <form asp-action="Process" method="post" >
+    <span asp-validation-for="Name"></span>
     <input asp-for="Name" >
+    <span asp-validation-for="Email"></span>
     <input asp-for="Email">
     <input type="submit" value="Create" >
  </form>
 ```
+
+With tag helpers we can bind our models or ViewModels to our forms.<br>
+`asp-for="Name"` ties User.Name to the input.<br>
+`asp-validation-for="Name"` ties the validation method to the form as well.
+
+### HomeController.cs
+
+```cs
+    public class HomeController : Controller
+    {
+        [HttpPost("process")]
+        public IActionResult Process(User newUser)
+        {
+            if(ModelState.IsValid)
+            {
+                return Redirect("/dashboard");
+            }
+            else
+            {
+                return View("Index");
+            }
+        }
+    }
+```
+
+We now pass the model reference type into the parameters of the post method, and can validate it like so.<br>
+If the ModelState isn't valid we can just re-render the form page.
