@@ -129,6 +129,8 @@ We also need to modify our `appsettings.json` to include "DBInfo"...
 }
 ```
 
+Make sure you change the `mydb` to whatever you want your schema to be called...
+
 **Note:** if you connect using a different port, username, or password make sure you update the "ConnectionString" accordingly.
 
 ## Controller Changes
