@@ -1,6 +1,6 @@
 # Day 8 - Entity Framework Core
 
-<img src="https://miro.medium.com/max/480/1*SnZqHENpIMiEKsg999Q0DQ.png" alt="ef-core />
+<img src="https://miro.medium.com/max/480/1*SnZqHENpIMiEKsg999Q0DQ.png" alt="ef-core" />
 
 ## Adding Packages
 
