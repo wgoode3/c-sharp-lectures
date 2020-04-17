@@ -4,7 +4,7 @@
 
 ## LoginReg
 
-In order to have a successfull Login & Registration we need to validate both a Register Form and a Login Form.<br>
+In order to have a successful Login & Registration we need to validate both a Register Form and a Login Form.<br>
 <br>
 We do so by creating two different models: `User.cs` && `LoginUser.cs`
 
@@ -99,3 +99,8 @@ Then we can hash passwords like so:
     }
 ```
 
+## LINQ
+
+<img src="https://www.zelda.com/links-awakening/assets/img/home/hero-char.png" alt="Link" width="400px">
+
+LINQ is an acronym for Language Integrated Query
