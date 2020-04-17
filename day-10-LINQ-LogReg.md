@@ -102,6 +102,7 @@ Then we can hash passwords like so:
 ## LINQ
 
 <img src="https://www.zelda.com/links-awakening/assets/img/home/hero-char.png" alt="Link" width="400px">
+*The Hero of (saving) Time*
 
 LINQ is an acronym for Language Integrated Query
 
