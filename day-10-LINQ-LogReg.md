@@ -113,3 +113,35 @@ We will be focusing on the Method Notation.
 #### Lambda Expressions
 
 <img src="https://res.cloudinary.com/teepublic/image/private/s--QH6eyKSY--/c_fit,g_north_west,h_840,w_837/co_000000,e_outline:40/co_000000,e_outline:inner_fill:1/co_ffffff,e_outline:40/co_ffffff,e_outline:inner_fill:1/co_bbbbbb,e_outline:3:1000/c_mpad,g_center,h_1260,w_1260/b_rgb:eeeeee/c_limit,f_jpg,h_630,q_90,w_630/v1582915404/production/designs/8222015_0.jpg" alt="Lambda" width="400px">
+
+Lambda Expressions are a way we can simplify a function into one line.<br>
+We use the `=>` to express a function returning something.<br>
+<br>
+Now we can use these expressions to query our database for the things we want to display on our page.
+
+`_context.Users.FirstOrDefault( u => u.UserId == userId);` will return the first user that it finds in the database.<br>
+
+There are methods for filtering, sorting, and general purpose.
+
+#### Filtering
+<ol>
+    <li>FirstOrDefault</li>
+    <li>Where</li>
+    <li>Select</li>
+</ol>
+
+#### Sorting
+<ol>
+    <li>OrderBy</li>
+    <li>OrderByDescending</li>
+    <li>ThenBy</li>
+    <li>ThenByDescending</li>
+</ol>
+
+#### General Purpose
+<ol>
+    <li>Min</li>
+    <li>Max</li>
+    <li>Take</li>
+    <li>ToList</li>
+</ol>
