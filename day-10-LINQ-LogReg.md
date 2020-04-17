@@ -112,4 +112,4 @@ We will be focusing on the Method Notation.
 
 #### Lambda Expressions
 
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Frevengeofthenerds.fandom.com%2Fwiki%2FLambda_Lambda_Lambda&psig=AOvVaw3XQyzsfiDM5fHiwTvtU2os&ust=1587218020829000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMiY1o3O7-gCFQAAAAAdAAAAABAD" alt="Lambda" width="400px">
+<img src="https://revengeofthenerds.fandom.com/wiki/Lambda_Lambda_Lambda?file=ADAMS_COLLEGE.jpg" alt="Lambda" width="400px">
