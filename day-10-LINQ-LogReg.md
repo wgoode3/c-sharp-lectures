@@ -104,3 +104,12 @@ Then we can hash passwords like so:
 <img src="https://www.zelda.com/links-awakening/assets/img/home/hero-char.png" alt="Link" width="400px">
 
 LINQ is an acronym for Language Integrated Query
+
+We can use LINQ with any type of dataset or SQL database.<br>
+There are two notations of LINQ `Method` and `Query`<br>
+<br>
+We will be focusing on the Method Notation.
+
+#### Lambda Expressions
+
+<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Frevengeofthenerds.fandom.com%2Fwiki%2FLambda_Lambda_Lambda&psig=AOvVaw3XQyzsfiDM5fHiwTvtU2os&ust=1587218020829000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMiY1o3O7-gCFQAAAAAdAAAAABAD" alt="Lambda" width="400px">
