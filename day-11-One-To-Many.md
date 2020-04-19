@@ -80,7 +80,10 @@ Since a Brony can have only one user, the foreign key must live in it's class.<b
 
 We can use Navigational Properties to join tables together from our database and apply them onto our classes.<br>
 <br>
-Entity Framework Core gives us an additional LINQ query that will help us to join our tables with a single query method.
+Entity Framework Core gives us an additional LINQ query that will help us to join our tables with a single query method.<br>
+<br>
+
+### Enter `.Include()` 
 
 #### HomeController.cs
 
