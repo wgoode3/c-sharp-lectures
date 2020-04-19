@@ -103,6 +103,8 @@ Then we can hash passwords like so:
 
 <img src="https://www.zelda.com/links-awakening/assets/img/home/hero-char.png" alt="Link" width="400px">
 
+<em>The Hero of (saving) Time</em>
+
 LINQ is an acronym for Language Integrated Query
 
 We can use LINQ with any type of dataset or SQL database.<br>
