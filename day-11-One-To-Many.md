@@ -43,6 +43,7 @@ namespace TradingBronies
 ```
 Notice that we have a list of brony that the user holds.  It's important to know that this list is not stored in the database.
 
+#### Brony.cs
 ```cs
 namespace TradingBronies
 {
@@ -76,3 +77,40 @@ namespace TradingBronies
 ```
 Since a Brony can have only one user, the foreign key must live in it's class.<br>
 `public User Owner { get; set; }` && `public List<Brony> MyLittleBronies { get; set; }` are known as Navigational Properties.
+
+We can use Navigational Properties to join tables together from our database and apply them onto our classes.<br>
+<br>
+Entity Framework Core gives us an additional LINQ query that will help us to join our tables with a single query method.
+
+#### HomeController.cs
+
+```cs
+namespace TradingBronies
+{
+    public class HomeController : Controller
+    {
+        private MyContext _context;
+        public HomeController(MyContext context)
+        {
+            _context = context;
+        } 
+
+        [HttpGet("")]
+        public IActionResult Index()
+        {
+            List<Brony> AllBronies = _context.Bronies.Include( b => b.Owner )
+                                                    .ToList();
+            return View(AllBronies);
+        }
+
+        [HttpGet("profile/{userId}")]
+        public IActionResult Profile(int userId)
+        {
+            User profile = _context.Users.Include( u => u.MyLittleBronies )
+                                        .FirstOrDefault( u => u.UserId == userId );
+            return View(profile);
+        }
+
+    }
+}
+```
