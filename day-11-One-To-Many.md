@@ -76,6 +76,25 @@ namespace TradingBronies
 }
 ```
 Since a Brony can have only one user, the foreign key must live in it's class.<br>
+
+We set up our Context file like so.
+
+#### MyContext.cs
+
+```cs
+namespace TradingBronies
+{
+    public class MyContext : DbContext
+    {
+        public MyContext(DbContextOptions options) : base(options){}
+
+        DbSet<User> Users { get; set; }
+
+        DbSet<Brony> Bronies { get; set; }
+    }
+}
+```
+
 `public User Owner { get; set; }` && `public List<Brony> MyLittleBronies { get; set; }` are known as Navigational Properties.
 
 We can use Navigational Properties to join tables together from our database and apply them onto our classes.<br>
