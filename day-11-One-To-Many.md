@@ -11,6 +11,9 @@ We have already been using PKs in the set up of our models, now we are going to 
 *For our site Trading Bronies*
 A User can have many Bronies, but a Brony can only have one User(Owner).
 
+<img src="https://raw.githubusercontent.com/wgoode3/c-sharp-lectures/master/assets/bros.png" alt="my little bronies" />
+
+
 #### User.cs
 ```cs
 namespace TradingBronies
