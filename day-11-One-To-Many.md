@@ -11,6 +11,9 @@ We have already been using PKs in the set up of our models, now we are going to 
 *For our site Trading Bronies*
 A User can have many Bronies, but a Brony can only have one User(Owner).
 
+<img src="https://raw.githubusercontent.com/wgoode3/c-sharp-lectures/master/assets/bros.png" alt="my little bronies" />
+
+
 #### User.cs
 ```cs
 namespace TradingBronies
@@ -120,16 +123,18 @@ namespace TradingBronies
         [HttpGet("")]
         public IActionResult Index()
         {
-            List<Brony> AllBronies = _context.Bronies.Include( b => b.Owner )
-                                                    .ToList();
+            List<Brony> AllBronies = _context.Bronies
+                                             .Include( b => b.Owner )
+                                             .ToList();
             return View(AllBronies);
         }
 
         [HttpGet("profile/{userId}")]
         public IActionResult Profile(int userId)
         {
-            User profile = _context.Users.Include( u => u.MyLittleBronies )
-                                        .FirstOrDefault( u => u.UserId == userId );
+            User profile = _context.Users
+                                   .Include( u => u.MyLittleBronies )
+                                   .FirstOrDefault( u => u.UserId == userId );
             return View(profile);
         }
 
