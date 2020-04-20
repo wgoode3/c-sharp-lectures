@@ -104,16 +104,18 @@ namespace TradingBronies
         [HttpGet("")]
         public IActionResult Index()
         {
-            List<Brony> AllBronies = _context.Bronies.Include( b => b.Owner )
-                                                    .ToList();
+            List<Brony> AllBronies = _context.Bronies
+                                             .Include( b => b.Owner )
+                                             .ToList();
             return View(AllBronies);
         }
 
         [HttpGet("profile/{userId}")]
         public IActionResult Profile(int userId)
         {
-            User profile = _context.Users.Include( u => u.MyLittleBronies )
-                                        .FirstOrDefault( u => u.UserId == userId );
+            User profile = _context.Users
+                                   .Include( u => u.MyLittleBronies )
+                                   .FirstOrDefault( u => u.UserId == userId );
             return View(profile);
         }
 
