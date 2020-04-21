@@ -7,31 +7,64 @@ Likewise we will need to create a `3rd` class and put it in our context file so 
 
 #### User.cs
 ```cs
-namespace TradingBronies
+namespace NinjaVillage
 {
-    public class User
+    public class Ninja
     {
         [Key]
-        public int UserId { get; set; }
+        public int NinjaId { get; set; }
 
         [Required]
         public string Name { get; set; }
 
         [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+        public string Weapon { get; set; }
 
         [Required]
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
+        public string BeltColor { get; set; }
 
         public DateTime CreatedAt { get; set; }
 
         public DateTime UpdatedAt { get; set; }
 
         //NOT stored in Database
-        public List<Brony> MyLittleBronies { get; set; }
+        public List<Association> Visited { get; set; }
 
+    }
+}
+```
+
+#### Dojo.cs
+
+```cs
+namespace NinjaVillage
+{
+    public class Village
+    {
+        [Key]
+        public int VillageId { get; set; }
+
+        public string Name { get; set; }
+
+        public string Location { get; set; }
+
+        public List<Association> Vistors { get; set; }
+    }
+}
+
+```
+
+```cs
+namespace NinjaVillage
+{
+    public class Association
+    {
+        [Key]
+        public int AssociationId { get; set; }
+
+        public int NinjaId { get; set; }
+        
+        public int Village { get; set; }
     }
 }
 ```
