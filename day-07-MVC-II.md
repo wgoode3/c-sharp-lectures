@@ -1,4 +1,4 @@
-# Day 3 - C# MVC - Part Deux
+# Day 7 - C# MVC - Part Deux
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg" alt="asp-dot-net core logo" height="250px" />
 
