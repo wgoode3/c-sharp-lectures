@@ -37,7 +37,7 @@ This model will get put into our database.
             public DateTime CreatedAt {get;set;} = DateTime.Now;
             public DateTime UpdatedAt {get;set;} = DateTime.Now;
 
-            // We us the NotMapped Annotation so that this variable doesn't end up in our database.
+            // We use the NotMapped Annotation so that this variable doesn't end up in our database.
             [NotMapped]
             [Compare("Password")]
             [DataType(DataType.Password)]
