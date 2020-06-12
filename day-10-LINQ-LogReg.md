@@ -98,6 +98,32 @@ Then we can hash passwords like so:
 
     }
 ```
+### Logic steps for Registration
+```
+    1. If the User model is valid.
+        3. If the email coming in is not in the database.
+            5. Hash the password.
+            6. Save the hashed version to the user model.
+            7. Add it to the database.
+            8. Save the database.
+            9. Put the UserId into Session.
+            10. Redirect!!!
+        4. Else update the validations and render the view with the Registrtion Form.
+    2. Else render the view with the Registration Form.
+```
+
+### Logic steps for Login
+```
+    1. If the LoginUser model is valid.
+        3. Query the database for the User based on the email.
+        4. If the user is in the database.
+            6. If the hashed password from the database matches the password coming in.
+                8. Put the UserId into Session.
+                9. Redirect!!!
+            7. Else update the validatiohs and render the view with the Login Form.
+        5. Else update the validations and render the view with the Login Form.
+    2. Else render the view with the Login Form.
+```
 
 ## LINQ
 
