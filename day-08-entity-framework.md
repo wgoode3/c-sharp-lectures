@@ -2,6 +2,16 @@
 
 <img src="https://miro.medium.com/max/480/1*SnZqHENpIMiEKsg999Q0DQ.png" alt="ef-core" />
 
+## More Tools
+
+Before we can start working with Entity Framework, we need to install the following tool...
+
+```
+dotnet tool install --global dotnet-ef
+```
+
+This will be installed globally, meaning we only need to do this once on our computer.
+
 ## Adding Packages
 
 After starting a new project and changing directory into it...
@@ -11,10 +21,11 @@ dotnet new mvc --no-https -o LizardPirates
 cd LizardPirates
 ```
 
-we need to add in a new package that will allow us to connect to a MySQL Database. 
+we need to add in new packages that will allow us to connect to a MySQL Database. 
 
 ```
-dotnet add package Pomelo.EntityFrameworkCore.MySql -v 2.2.0
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 3.1.5
+dotnet add package Pomelo.EntityFrameworkCore.MySql --version 3.1.1
 ```
 
 ## Making a Model
@@ -93,8 +104,9 @@ namespace LizardPirates
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSession();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddDbContext<MyContext>(options => options.UseMySql(Configuration["DBInfo:ConnectionString"]));
+            services.AddDbContext<MyContext>(o => o.UseMySql (Configuration["DBInfo:ConnectionString"]));
+            services.AddControllersWithViews();
+            services.AddMvc(option => option.EnableEndpointRouting = false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
