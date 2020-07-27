@@ -69,7 +69,7 @@ First up we need to modify the `ConfigureServices` method...
 ```cs
 public void ConfigureServices(IServiceCollection services)
 {
-    services.AddMvc();
+    services.AddMvc(option => option.EnableEndpointRouting = false);
 }
 ```
 
