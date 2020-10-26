@@ -54,25 +54,25 @@ Compile Time vs. Runtime
 Declaring variables...
 
 ```cs
-int FavoriteNumber = 3;
-double Average = 15.2;
-char Letter = 'x';
-string Message = "Hello World!";
-bool LikesCSharp = true;
+int favoriteNumber = 3;
+double averageTemperature = 18.2;
+char selectedLetter = 'x';
+string welcomeMessage = "Hello World!";
+bool likesCSharp = true;
 ```
 
 will work about how we'd expect. One thing to note is that `'` and `"` can't be used interchangebly like we could in other languages, the single quote is used for `char`s (1 character) and the double quote is used for `string`s (any number of chacaters). C# is also capable of inferring what type our variables are if we use the keyword `var`...
 
 ```cs
-var SomeNumber = 5;
-var SomeString = "Howdy Planet?";
+var someNumber = 5;
+var someString = "Howdy Planet?";
 ```
 
 However we still won't be able to change a variable from one type to another...
 
 ```cs
-SomeNumber = false;
-SomeString = -33.33;
+someNumber = false;
+someString = -33.33;
 ```
 
 both of these will surely fail.
@@ -84,17 +84,17 @@ both of these will surely fail.
 In C# we have to tell our arrays what type of data to expect...
 
 ```cs
-string[] foods = new string[4];
-foods[0] = "bagels";
-foods[1] = "cream cheese";
-foods[4] = "smoked salmon";
-foods[3] = "capers";
+string[] foodArray = new string[4];
+foodArray[0] = "bagels";
+foodArray[1] = "cream cheese";
+foodArray[4] = "smoked salmon";
+foodArray[3] = "capers";
 ```
 
 Or more conveniently we could write this as...
 
 ```cs
-string[] Foods = new string[]{
+string[] foodArray = new string[]{
     "bagels",
     "cream cheese",
     "smoked salmon",
@@ -102,7 +102,7 @@ string[] Foods = new string[]{
 };
 ```
 
-If we go to print this out `Console.WriteLine(Foods);` we get...
+If we go to print this out `Console.WriteLine(foodArray);` we get...
 
 ```
 System.String[]
@@ -115,7 +115,7 @@ Helpful right? C# makes no assumptions about what we want to see here and instea
 To see the contents of the array we might instead do something like this...
 
 ```cs
-Console.WriteLine(String.Join(", ", Foods));
+Console.WriteLine(String.Join(", ", foodArray));
 ```
 
 #### Changing the size of an array
@@ -135,7 +135,7 @@ using System.Collections.Generic;
 The syntax might look a bit strange at first, but we still need to let the `List` know what type of data it will hold...
 
 ```cs
-List<string> Foods = new List<string>() {
+List<string> foodList = new List<string>() {
     "bagels",
     "cream cheese",
     "smoked salmon",
@@ -146,8 +146,8 @@ List<string> Foods = new List<string>() {
 But now we can add more things in when we want to...
 
 ```cs
-Foods.Add("dill");
-Foods.Add("onion");
+foodList.Add("dill");
+foodList.Add("onion");
 ```
 
 #### Dictionaries
@@ -155,9 +155,9 @@ Foods.Add("onion");
 Once again, we'll need to make sure we've imported `System.Collections.Generic` but this time we also need to specify what the type of our key and value will be...
 
 ```cs
-Dictionary<string, string> User = new Dictionary<string, string>();
-User["name"] = "Example McExampleface";
-User["email"] = "example@example.com";
+Dictionary<string, string> user = new Dictionary<string, string>();
+user["name"] = "Example McExampleface";
+user["email"] = "example@example.com";
 ```
 
 Otherwise it will work about how we're used to from JavaScript and Python.
@@ -179,14 +179,14 @@ If we want to loop over an Array or a List we can reference their sizes like so.
 
 ```cs
 // array
-for(int i=0; i<MyArray.Length; i++)
+for(int i=0; i<myArray.Length; i++)
 {
-    Console.WriteLine(MyArray[i]);
+    Console.WriteLine(myArray[i]);
 }
 // list
-for(int i=0; i<MyList.Count; i++)
+for(int i=0; i<myList.Count; i++)
 {
-    Console.WriteLine(MyList[i]);
+    Console.WriteLine(myList[i]);
 }
 ```
 
@@ -195,10 +195,10 @@ The thing to remember is that arrays have `Length` and that lists have `Count`.
 If we don't need to know about the index we could use the more convenient method called `foreach()`.
 
 ```cs 
-foreach(int value in MyArray){
+foreach(int value in myArray){
     Console.writeLine(value);
 }
-foreach(int value in MyList){
+foreach(int value in myList){
     Console.writeLine(value);
 }
 ```
@@ -221,22 +221,22 @@ while(!input.Equals("uncle"))
 #### Conditionals
 
 ```cs
-int NumberOfLights = 4;
-Console.WriteLine($"There are {NumberOfLights} lights!");
-NumberOfLights = 1;
-Console.WriteLine($"There are {NumberOfLights} lights!");
+int numberOfLights = 4;
+Console.WriteLine($"There are {numberOfLights} lights!");
+numberOfLights = 1;
+Console.WriteLine($"There are {numberOfLights} lights!");
 ```
 
 If we want the grammar to sound right, we'll need to be able to change the wording a bit if there is only 1 light... we can use a conditional for this.
 
 ```cs
-if(NumberOfLights == 1) 
+if(numberOfLights == 1) 
 {
     Console.WriteLine("There is 1 light!");
 }
 else
 {
-    Console.WriteLine($"There are {NumberOfLights} lights!");
+    Console.WriteLine($"There are {numberOfLights} lights!");
 }
 ```
 
